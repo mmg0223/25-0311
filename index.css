@@ -1,1 +1,7 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
+body{color: #333;}
+h1{position: absolute; left: -999px;}
+a{color: #333; text-decoration: none;}
+
+
+.view-size{width: 1168px; margin: 0 auto;}
