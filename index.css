@@ -1,8 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{padding: 0; margin: 0; box-sizing: border-box;}
-body{color: #333;}
+body{color: #333;  font-family: "Noto Sans KR", "Roboto"}
 h1{position: absolute; left: -999px;}
 a{color: #333; text-decoration: none;}
 li{list-style: none;}
+button{border: none;outline: none;background-color: transparent;}
 
 .view-size{width: 1168px; margin: 0 auto;}
 .flex{display: flex;}
+.center{justify-content: center;}
+.between{justify-content: space-between;}
+.al-center{align-items: center;}
+#header{
+  border-bottom: 1px solid #a9a9a9;
+}
+#header>div{
+  height: 69px;
+  line-height: 69px;
+}
+
+#logo>.wrap{
+  width: 236px;
+}
+
+#gnb > div > ul > li:not(:last-child){
+  margin-right: 30px;
+}
+#gnb > div > ul > li> a{
+  display: flex;
+  position: relative;
+}
+#gnb > div > ul > li> a:hover{
+  color: #03c161;
+}
+#gnb > div > ul > li> a::after{
+  content: "";
+  border-bottom: 2px solid #03c161;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  transition: all 0.2s;
+}
+#gnb > div > ul > li> a:hover::after{
+  left: 0;
+  width: 100%;
+}
+#gnb > div > ul > li:hover > .sub{
+  height: auto;
+  padding: 26px 0;
+}
+#gnb > div > ul > li > .sub{
+  position: fixed;
+  background-color: #fff;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 15px;
+  letter-spacing: -1px;
+  z-index: 100;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease-out;
+}
+#gnb > div > ul > li > .sub> dl{
+  width: 150px;
+}
+#gnb > div > ul > li > .sub> dl> dt{font-weight: 700; padding-bottom: 15px;}
+
+
+#user-menu > div > div.form-wrap{
+  margin: 0 20px 0 10px;
+}
+#user-menu > div > div> form{
+  border: 1px solid #a9a9a9;
+}
+#user-menu > div > div> form > input{
+  height: 32px;
+  border: none;
+}
+#user-menu > div > div> form > button{
+  width: 24px;
+  height: 24px;
+  background-image: url(./images/search_24dp.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#user-menu > div > div > a > i{
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #03c161;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 5px;
+}
+#user-menu > div > div > a > i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/check_circle_24dp.svg);
+  background-position: center;
+  filter: brightness(0) invert(1); /* 필터는 이 요소에만 적용됨 */
+}
+
+#user-menu > div > div.login> a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: #fff;
+  width: 77px;
+  height: 32px;
+
+}
+
+
+#visual>div>ul{
+  height: 534px;
+}
+#visual>div>ul>li{
+  width: 1920px;
+  min-height: 100%;
+}
+#visual>div>ul>li:nth-of-type(1){
+  background-image: url(./images/img_1.png);
+}

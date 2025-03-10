@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
   <h1>안녕하세요</h1>
-  <header>
+  <header id="header">
     <h1>헤더영역</h1>
-    <div class="view-size">
+    <div class="view-size flex wrap between">
       <div class="flex">
         <section id="logo">
           <h1>로고섹션</h1>
-          <div>
+          <div class="wrap">
             <a href="#">
               <h2>
                 <span>KH</span>
@@ -25,19 +27,139 @@
         </section>
         <nav id="gnb">
           <h1>메인메뉴</h1>
-          <div>
+          <div class="wrap">
             <ul class="flex">
               <li>
-                <a href="#">Products</a>
+                <a href="#">
+                  <span>Products</span>
+                  <div class="sub flex center">
+                    <dl>
+                      <dt>
+                        <a href="#">API이용안내</a>
+                      </dt>
+                      <dd><a href="#">API 소개</a></dd>
+                      <dd><a href="#">운영 정책</a></dd>
+                      <dd><a href="#">FAQ</a></dd>
+                      <dd><a href="#">BI 가이드</a></dd>
+                      <dd><a href="#">이용약관</a></dd>
+                      <dd><a href="#">상표사용 가이드</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">CLOVA</a>
+                      </dt>
+
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">네이버 로그인</a>
+                      </dt>
+                      <dd><a href="#">API 소개</a></dd>
+                      <dd><a href="#">운영 정책</a></dd>
+                      <dd><a href="#">FAQ</a></dd>
+                      <dd><a href="#">BI 가이드</a></dd>
+                      <dd><a href="#">이용약관</a></dd>
+                      <dd><a href="#">상표사용 가이드</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">서비스 API</a>
+                      </dt>
+                      <dd><a href="#">API 소개</a></dd>
+                      <dd><a href="#">운영 정책</a></dd>
+                      <dd><a href="#">FAQ</a></dd>
+                      <dd><a href="#">BI 가이드</a></dd>
+                      <dd><a href="#">이용약관</a></dd>
+                      <dd><a href="#">상표사용 가이드</a></dd>
+                    </dl>
+                  </div>
+                </a>
               </li>
               <li>
-                <a href="#">Docments</a>
+                <a href="#">
+                  <span>Docments</span>
+                  <div class="sub flex center">
+                    <dl>
+                      <dt>
+                        <a href="#">API 공통가이드</a>
+                      </dt>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">CLOVA</a>
+                      </dt>
+
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">네이버 로그인</a>
+                      </dt>
+                      <dd><a href="#">API 소개</a></dd>
+                      <dd><a href="#">운영 정책</a></dd>
+                      <dd><a href="#">FAQ</a></dd>
+                      <dd><a href="#">BI 가이드</a></dd>
+                      <dd><a href="#">이용약관</a></dd>
+                      <dd><a href="#">상표사용 가이드</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">서비스 API</a>
+                      </dt>
+                      <dd><a href="#">API 소개</a></dd>
+                      <dd><a href="#">운영 정책</a></dd>
+                      <dd><a href="#">FAQ</a></dd>
+                      <dd><a href="#">BI 가이드</a></dd>
+                      <dd><a href="#">이용약관</a></dd>
+                      <dd><a href="#">상표사용 가이드</a></dd>
+                    </dl>
+                  </div>
+                </a>
               </li>
               <li>
-                <a href="#">Application</a>
+                <a href="#">
+                  <span>
+                    Application
+                  </span>
+                  <div class="sub flex center">
+                    <dl>
+                      <dt>
+                        <a href="#">내 애플리케이션</a>
+                      </dt>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">애플리케이션 등록</a>
+                      </dt>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">API 제휴신청</a>
+                      </dt>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">계정설정</a>
+                      </dt>
+                    </dl>
+                  </div>
+                </a>
               </li>
               <li>
-                <a href="#">Support</a>
+                <a href="#">
+                  <span>Support</span>
+                  <div class="sub flex center">
+                    <dl>
+                      <dt>
+                        <a href="#">공지사항</a>
+                      </dt>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#">라이선스 준수</a>
+                      </dt>
+                    </dl>
+                  </div>
+                </a>
               </li>
               <li>
                 <a href="#">Forum</a>
@@ -47,15 +169,40 @@
         </nav>
       </div>
       <div>
-        <section>
+        <section id="user-menu">
           <h1>사용자메뉴</h1>
-          <div>
-
+          <div class="wrap flex">
+            <div>
+              <a href="#" class="flex al-center">
+                <i>
+                </i>
+                <span>API상태</span>
+              </a>
+            </div>
+            <div class="form-wrap flex al-center">
+              <form action="#" class="flex al-center">
+                <input type="search" />
+                <button type="submit"></button>
+              </form>
+            </div>
+            <div class="login flex al-center">
+              <a href="#">로그인</a>
+            </div>
           </div>
         </section>
       </div>
     </div>
   </header>
+  <section id="visual">
+    
+    <div>
+      <ul>
+        <li>
+
+        </li>
+      </ul>
+    </div>
+  </section>
   <main>
     <h1>메인컨텐츠</h1>
     <div class="view-size">
@@ -69,4 +216,5 @@
     </div>
   </footer>
 </body>
+
 </html>
