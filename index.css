@@ -127,23 +127,36 @@ button{border: none;outline: none;background-color: transparent;}
   width: 1920px;
   height: 534px;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
 }
 #visual>div>ul{
   display: flex;
-  width: calc(1920px*3);
+  width: calc(1920px*4);
   /* transform: translateX(-1920px); */
   animation-name: slide;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
+  /* 총시간=이미지개수(복사본제외)*(이동시간+멈추는시간) */
+  animation-duration: 9s;
+  animation-timing-function: linear;
   animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
+#visual>div>ul:hover{
+  animation-play-state: paused;
+  /* animation-timing-function: steps(1, end); */
+}
+
+/*총9단계(100% /9 )나누어서 이동시간 1초 단위 %계산 */
 @keyframes slide {
   0%{transform: translateX(0);}
-  23%{transform: translateX(calc(-1920px*1));}
-  33%{transform: translateX(calc(-1920px*1));}
-  56%{transform: translateX(calc(-1920px*2));}
-  66%{transform: translateX(calc(-1920px*2));}
+  11.11%{transform: translateX(calc(-1920px*1));}
+  33.33%{transform: translateX(calc(-1920px*1));}
+  
+  44.44%{transform: translateX(calc(-1920px*2));}
+  66.66%{transform: translateX(calc(-1920px*2));}
+
+  77.77%{transform: translateX(calc(-1920px*3));}
   100%{transform: translateX(calc(-1920px*3));}
 }
 #visual>div>ul>li>a{
@@ -151,12 +164,32 @@ button{border: none;outline: none;background-color: transparent;}
   height: 534px;
   display: block;
 }
-#visual>div>ul>li:nth-of-type(1)>a{
+#visual>div>ul>li.img1>a{
   background-image: url(./images/img_1.png);
 }
-#visual>div>ul>li:nth-of-type(2)>a{
+#visual>div>ul>li.img2>a{
   background-image: url(./images/img_2.png);
 }
-#visual>div>ul>li:nth-of-type(3)>a{
+#visual>div>ul>li.img3>a{
   background-image: url(./images/img_3.png);
+}
+
+#visual>div>.btn>button{
+  background-image: url(./images/expand_circle_right.svg);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: calc(50% - 50px);
+  filter: brightness(0) invert(1);
+  opacity: 0.5;
+  
+}
+#visual>div>.btn>button.left{
+  left: 50px;
+  transform: rotate(180deg);
+}
+#visual>div>.btn>button.right{
+  right: 50px;
 }
