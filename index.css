@@ -127,38 +127,14 @@ button{border: none;outline: none;background-color: transparent;}
   width: 1920px;
   height: 534px;
   margin: 0 auto;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
 }
 #visual>div>ul{
   display: flex;
-  width: calc(1920px*4);
-  /* transform: translateX(-1920px); */
-  animation-name: slide;
-  /* 총시간=이미지개수(복사본제외)*(이동시간+멈추는시간) */
-  animation-duration: 9s;
-  animation-timing-function: linear;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-#visual>div>ul:hover{
-  animation-play-state: paused;
-  /* animation-timing-function: steps(1, end); */
+  width: calc(1920px*3);
 }
 
-/*총9단계(100% /9 )나누어서 이동시간 1초 단위 %계산 */
-@keyframes slide {
-  0%{transform: translateX(0);}
-  11.11%{transform: translateX(calc(-1920px*1));}
-  33.33%{transform: translateX(calc(-1920px*1));}
-  
-  44.44%{transform: translateX(calc(-1920px*2));}
-  66.66%{transform: translateX(calc(-1920px*2));}
-
-  77.77%{transform: translateX(calc(-1920px*3));}
-  100%{transform: translateX(calc(-1920px*3));}
-}
 #visual>div>ul>li>a{
   width: 1920px;
   height: 534px;
